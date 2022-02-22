@@ -2,10 +2,10 @@ package linkedList2;
 
 public class MergeTwoSortedLL {
 
-	public static LinkedListNode<Integer> mergeTwoSortedLinkedLists(LinkedListNode<Integer> h1, LinkedListNode<Integer> h2) {
-        if(h1==null) return h2;
-        if(h2==null) return h1;
-        LinkedListNode<Integer> head=null, tail=null, t1=h1, t2=h2;
+	public static LinkedListNode<Integer> mergeTwoSortedLinkedLists(LinkedListNode<Integer> head1, LinkedListNode<Integer> head2) {
+        if(head1==null) return head2;
+        if(head2==null) return head1;
+        LinkedListNode<Integer> head=null, tail=null, t1=head1, t2=head2;
         if(t1.data <= t2.data)
         {
             head= t1;
@@ -14,7 +14,7 @@ public class MergeTwoSortedLL {
         }
         else {
             head=t2;
-            tail=h2;
+            tail=head2;
             t2=t2.next;  
         }
         while(t1!=null && t2!=null)
