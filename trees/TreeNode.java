@@ -2,7 +2,7 @@ package trees;
 
 import java.util.ArrayList;
 
- class TreeNode<T> {
+ public class TreeNode<T> {
 	T data;
 	ArrayList<TreeNode<T>> children;
 
@@ -10,5 +10,6 @@ import java.util.ArrayList;
 		this.data = data;
 		children = new ArrayList<TreeNode<T>>();
 	}
+	
 	
 }
