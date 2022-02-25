@@ -52,8 +52,6 @@ public class Print_Tree_LevelWise {
 	public static void main(String[] args) {
 		TreeNode<Integer> root=takeInputLevelWise();
 	//	printLevelWise(root);
-		
-		
 	}
 	
 }
