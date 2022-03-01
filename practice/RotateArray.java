@@ -3,7 +3,6 @@ package practice;
 public class RotateArray {
 
 	   public static void rotate(int[] arr, int d) {
-	    	//Your code goes here
 	        if(arr.length==0)
 	            return;
 	       	d=d%arr.length;
