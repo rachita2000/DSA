@@ -12,7 +12,7 @@ public class RotateArray {
 	    }
 		static void reverse(int[] arr, int i, int j)
 	    {
-	        while(i <j)
+	        while(i<j)
 	        {
 	            int tmp=arr[i];
 	            arr[i]=arr[j];
