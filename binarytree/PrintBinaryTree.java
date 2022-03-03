@@ -67,41 +67,22 @@ public class PrintBinaryTree {
             }   
         }
 	}
-	// root -- left -- right
-		public static void preOrder(BinaryTreeNode<Integer> root)
-		{
-			if(root==null) return;
-			System.out.print(root.data+" ");
-			preOrder(root.left);
-			preOrder(root.right);
-		}
-		
-		// left -- right -- root
-		public static void postOrder(BinaryTreeNode<Integer> root)
-		{
-			if(root==null) return;
-			preOrder(root.left);
-			preOrder(root.right);
-			System.out.print(root.data+" ");
-		}
-		
-		// left -- root -- right
-		public static void inOrder(BinaryTreeNode<Integer> root)
-		{
-			if(root==null) return;
-			preOrder(root.left);
-			System.out.print(root.data+" ");
-			preOrder(root.right);
-			
+	
+	 static int max=0;
+		public static int diameterOfBinaryTree(BinaryTreeNode<Integer> root){
+			if(root==null) return 0;
+			System.out.println("max "+max);
+			int leftHeight=diameterOfBinaryTree(root.left);
+			int rightHeight=diameterOfBinaryTree(root.right);
+			System.out.println("left "+leftHeight);
+			System.out.println("right "+rightHeight);
+			max=Math.max(max,leftHeight +rightHeight);
+			 return 1+Math.max(rightHeight, leftHeight);
 		}
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		BinaryTreeNode<Integer> root=takeInputLevelWise(sc);
-		//printLevelWise(root);
-		preOrder(root);
-		System.out.println();
-		postOrder(root);
-		System.out.println();
-		inOrder(root);
+		printLevelWise(root);
+		System.out.println(diameterOfBinaryTree(root));
 	}
 }
