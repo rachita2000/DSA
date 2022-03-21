@@ -7,7 +7,7 @@ class NodeHavingSumOfChildrenAndNodeIsMax {
         int sum=root.data;
         for(int i=0;i<root.children.size();i++)
         {
-             sum+=(root.children.get(i).data);
+            sum+=(root.children.get(i).data);
         }
         for(int i=0;i<root.children.size();i++)
         {
