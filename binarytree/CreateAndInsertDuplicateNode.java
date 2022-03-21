@@ -7,6 +7,7 @@ public class CreateAndInsertDuplicateNode {
         
         insertDuplicateNode(root.left);
         insertDuplicateNode(root.right);
+        
         BinaryTreeNode<Integer> oldLeft=root.left;
         root.left=new BinaryTreeNode<Integer>(root.data);
         root.left.left=oldLeft;
