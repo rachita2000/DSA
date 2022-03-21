@@ -3,7 +3,7 @@ package linkedList1;
 public class DeleteNode {
 
 	public static LinkedListNode<Integer> deleteNode(LinkedListNode<Integer> head, int pos) {
-		// Write your code here.
+	
         if(head==null)
             return head;
         if(pos==0)
