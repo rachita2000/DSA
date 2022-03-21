@@ -7,6 +7,7 @@ public class MinimumBracketReversal {
 
 	public static int countBracketReversals(String input) {
 		if(input.length()%2!=0) return -1;
+		
         Stack<Character> s=new Stack<>();
         int count=0;
         for(int i=0;i<input.length();i++)
