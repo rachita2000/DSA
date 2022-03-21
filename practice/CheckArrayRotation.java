@@ -9,7 +9,7 @@ Your task is to write a function that returns the value of 'K', that means,
 the index from which the array/list has been rotated.*/
 	
 	public static int arrayRotateCheck(int[] arr){
-    	//Your code goes here
+    	
         int ans=0;
         for(int i=1;i<arr.length;i++)
         {
